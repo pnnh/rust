@@ -1,1 +1,3 @@
-基于rust官方示例代码写的hello world程序
+基于rust教程写的一些示例代码
+
+采用cargo workspace来管理各个示例
