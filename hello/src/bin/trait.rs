@@ -5,7 +5,7 @@ pub trait Summary {
     fn summarize(&self) -> String;
 
     fn summarize2(&self) -> String {
-        String::from("(Read more from {}...)", self.summarize())
+        String::from("(Read more from {}...)")
     }
 }
 
@@ -13,7 +13,7 @@ struct Pair<T> {
     x: T,
     y: T,
 }
-impl Pair<T> {
+impl<T> Pair<T> {
     fn new(x: T, y: T) -> Self {
         Self { x, y }
     }

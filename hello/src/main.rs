@@ -17,8 +17,9 @@ pub use crate::guess::guess_mod;
 
 extern crate libc;
 
-extern {
-    fn list_file(input: libc::c_int) -> libc::c_int;
+#[link(name = "list_file")]
+extern "C" {
+    fn list_file(input: i32) -> i32;
 }
 
 const MAX_POINTS: u32 = 100_000;
@@ -32,7 +33,8 @@ fn run_say() {
     let width = message.chars().count();
 
     let mut writer = BufWriter::new(stdout.lock());
-    say(message.as_bytes(), width, &mut writer).unwrap();
+    let msg = message.as_str();
+    say(msg, width, &mut writer).unwrap();
 
     let input = 4;
     let output = unsafe { list_file(input) };
@@ -43,7 +45,7 @@ fn run_say() {
 fn main() {
     println!("Hello, world!");
 
-    // run_say();
+    run_say();
     // guess_mod::guess_number();
     // run_mod::run_tuple();
     // run_mod::run_array(7);
@@ -53,5 +55,5 @@ fn main() {
     //run::run_iter();
     // hosting::add_to_waitlist();
 
-    string::run_main();
+    // string::run_main();
 }

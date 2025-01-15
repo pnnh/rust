@@ -33,7 +33,7 @@ fn change_mut(some_string: &mut String) {
     // some_string.push_str("world");      // 将编译出错，无法修改引用的值
 }
 
-fn dangle() -> &String {
-    let s = String::from("hello");
-    &s
-}
+// fn dangle() -> &String {
+//     let s = String::from("hello");
+//     &s
+// }

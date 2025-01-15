@@ -65,7 +65,7 @@ fn value_in_cents(coin: Coin) -> u32 {
             println!("State quarter from {:?}!", state);
             25
         }
-        _ => count += 1,
+        _ => count + 1,
     }
 }
 
@@ -121,7 +121,7 @@ fn main() {
         _ => (), // 其它未匹配情况
     }
 
-    if let Some(3) = some_u8_value {
-        println!("three");
+    if let val = some_u8_value {
+        println!("three, {}", val);
     }
 }
