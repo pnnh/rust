@@ -1,5 +1,4 @@
 use std::collections::HashMap;
-//use std::collections::*;
 
 pub fn run_main() {
     let s = String::from("hello");
@@ -22,10 +21,6 @@ fn makes_copy(some_interger: i32) {
 fn main() {
     let mut map = HashMap::new();
     map.insert(1, 2);
-
-    let teams = vec![String::from("Blue"), String::from("Yellow")];
-    let initial_scores = vec![10, 50];
-    let scores: HashMap<_, _> = teams.iter().zip(initial_scores.iter()).collect();
 
     let field_name = String::from("Favorite color");
     let field_value = String::from("Blue");

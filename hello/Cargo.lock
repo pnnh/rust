@@ -82,6 +82,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "hashmap"
+version = "0.1.0"
+
+[[package]]
 name = "hello"
 version = "0.1.0"
 dependencies = [
@@ -254,6 +258,10 @@ name = "smawk"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b7c388c1b5e93756d0c740965c41e8822f866621d41acbdf6336a6a168f8840c"
+
+[[package]]
+name = "strings"
+version = "0.1.0"
 
 [[package]]
 name = "syn"

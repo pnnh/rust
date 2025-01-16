@@ -1,3 +1,9 @@
+---
+cls: MTNote
+uid: 3b4b55ac-66b8-412b-9f59-d275de556af5
+title: Rust调用C代码示例
+---
+
 # Rust调用C代码示例
 
 本示例演示了如何在Rust中调用C代码。在macOS M1系统Rust 1.84.0版本下测试通过。

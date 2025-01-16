@@ -9,18 +9,10 @@ use ferris_says::say;
 use std::cmp::Ordering;
 use std::cmp::Ordering::Equal;
 use std::io::{stdout, BufWriter, Read};
-use libc::{printf, pselect};
-
 pub use crate::front_of_house::hosting;
 //pub use crate::run::run_mod;
 pub use crate::guess::guess_mod;
 
-extern crate libc;
-
-#[link(name = "list_file")]
-extern "C" {
-    fn list_file(input: i32) -> i32;
-}
 
 const MAX_POINTS: u32 = 100_000;
 
@@ -36,9 +28,6 @@ fn run_say() {
     let msg = message.as_str();
     say(msg, width, &mut writer).unwrap();
 
-    let input = 4;
-    let output = unsafe { list_file(input) };
-    println!("{} * 2 = {}", input, output);
 }
 
 
