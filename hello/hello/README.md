@@ -1,6 +1,6 @@
 ---
 cls: MTNote
-uid: 3b4b55ac-66b8-412b-9f59-d275de556af5
+uid: 67850b27-0754-44f9-be4b-2b31032e1b53
 title: Rust Hello World
 ---
 
